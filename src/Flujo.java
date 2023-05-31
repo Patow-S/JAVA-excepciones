@@ -11,17 +11,17 @@ public class Flujo {
         System.out.println("Inicio de metodo1");
         try {
             metodo2();
-        } catch(MiException ex) {
-            String msg = ex.getMessage();
+        } catch(MiException e) {
+            String msg = e.getMessage();
             System.out.println("Exception " + msg);
-            ex.printStackTrace();
+            e.printStackTrace();
         }
         System.out.println("Fin de metodo1");
     }
 
     private static void metodo2() throws MiException {
         System.out.println("Inicio de metodo2");
-        throw new ArithmeticException("dio error");
+        throw new ArithmeticException("Mi excepcion fue lanzada");
         // System.out.println("Fin de metodo2");
     }
 
